@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML Events</h2>
+<p>Click the button to display the date.</p>
+<button onclick="displayDate()">The time is?</button>
+
+<h3>Input Field Change Event</h3>
+Enter some text: <input id="inpt" type="text" name="txt" value="Hello" onchange="inputFieldChange(this.value)">
+
+<script>
+    document.getElementById("inpt").value;
+
+    function displayDate() {
+        document.getElementById("demo").innerHTML = Date();
+        displayLog();
+        document.getElementById("inpt").value;
+    }
+    function displayLog(){
+        console.log(document.getElementById("inpt").value);
+    }
+
+    function inputFieldChange(value){
+        console.log('Onchange Event '+value);
+    }
+</script>
+
+<p id="demo"></p>
+
+</body>
+</html> 
